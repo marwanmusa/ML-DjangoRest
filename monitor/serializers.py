@@ -7,7 +7,7 @@ class PredictionSerializer(serializers.ModelSerializer):
     bp = serializers.ChoiceField(Prediction.group_bp, required=True)
     cholesterol = serializers.ChoiceField(Prediction.group_chol, required=True)
     salt = serializers.FloatField()
-    
+
     class Meta:
         model = Prediction
         fields = '__all__'
