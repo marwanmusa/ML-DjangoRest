@@ -17,6 +17,7 @@ numpy = "*"
 django-extensions = "*"
 jupyter = "*"
 seaborn = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

@@ -4,3 +4,4 @@
 *migrations/
 *extras/
 *.ipynb_checkpoints/
+*.env
