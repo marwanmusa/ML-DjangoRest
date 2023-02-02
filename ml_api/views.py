@@ -4,15 +4,26 @@ from .apps import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from django.contrib.auth.models import AnonymousUser
+from django.contrib.auth import get_user_model
 from django.db.models import Prefetch
 from rest_framework import status, viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from .serializers import *
 
 linreg = ModelLinReg.model
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    User = get_user_model()
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    authentication_classes = (TokenAuthentication)
+    permission_classes = (IsAuthenticated,)
 
 
 class WeightPredictionViewSet(viewsets.ModelViewSet):
