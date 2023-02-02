@@ -1,13 +1,14 @@
-import joblib
 import os
+import joblib
 from django.apps import AppConfig
 from django.conf import settings
 
-class MonitorConfig(AppConfig):
+class MlApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'monitor'
+    name = 'ml_api'
 
-class ModelDTree(AppConfig):
+class ModelLinReg(AppConfig):
     name = 'api'
-    MODEL_FILE = os.path.join(settings.MODELS, "DecisionTreeModel.joblib")
+    MODEL_FILE = os.path.join(settings.MODELS, "WeightPredictionLinRegModel.joblib")
     model = joblib.load(MODEL_FILE)
+

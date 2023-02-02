@@ -3,6 +3,6 @@ from rest_framework import routers
 from .views import *
 
 router = routers.DefaultRouter()
-router.register(prefix='predictions', viewset=PredictionViewSet)
+router.register(prefix='prediction', viewset = WeightPredictionViewSet)
 
 urlpatterns = router.urls
