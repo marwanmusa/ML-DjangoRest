@@ -25,6 +25,9 @@ keras = "*"
 mtcnn = "*"
 keras-applications = "*"
 keras-preprocessing = "*"
+cmake = "*"
+dlib = "*"
+face-recognition = "*"
 
 [dev-packages]
 
