@@ -18,6 +18,17 @@ django-extensions = "*"
 jupyter = "*"
 seaborn = "*"
 python-dotenv = "*"
+tensorflow = "*"
+opencv-python = "*"
+pillow = "*"
+keras = "*"
+mtcnn = "*"
+keras-applications = "*"
+keras-preprocessing = "*"
+cmake = "*"
+dlib = "*"
+face-recognition = "*"
+httpie = "*"
 
 [dev-packages]
 
