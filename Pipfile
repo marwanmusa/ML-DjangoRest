@@ -28,6 +28,7 @@ keras-preprocessing = "*"
 cmake = "*"
 dlib = "*"
 face-recognition = "*"
+httpie = "*"
 
 [dev-packages]
 
