@@ -5,3 +5,4 @@
 *extras/
 *.ipynb_checkpoints/
 *.env
+*ml/models/headshots/
