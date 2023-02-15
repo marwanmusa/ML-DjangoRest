@@ -37,7 +37,7 @@ face_locations = []
 face_encodings = []
 face_names = []
 process_this_frame = True
-
+faces = []
 while True:
     # Grab a single frame of video
     ret, frame = video_capture.read()
@@ -96,9 +96,12 @@ while True:
     cv2.imshow('Video', frame)
 
     # Hit 'q' on the keyboard to quit!
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if (cv2.waitKey(1) & 0xFF == ord('q')):
+        if face_names[0] in known_face_names:
+            faces = face_names
         break
 
 # Release handle to the webcam
 video_capture.release()
 cv2.destroyAllWindows()
+print(faces)

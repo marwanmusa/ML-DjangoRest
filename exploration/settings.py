@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ml_agent.apps.MlAgentConfig',
-    'rest_framework'
+    'api.apps.ApiConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MODELS = os.path.join(BASE_DIR, 'ml\\models')
+IMG_FILE = os.path.join(BASE_DIR, "ml\\models\\headshots\\Marwan Musa")
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',

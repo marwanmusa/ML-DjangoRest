@@ -29,6 +29,8 @@ cmake = "*"
 dlib = "*"
 face-recognition = "*"
 httpie = "*"
+geopy = "*"
+geocoder = "*"
 
 [dev-packages]
 
